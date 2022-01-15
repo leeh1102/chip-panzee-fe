@@ -1,6 +1,8 @@
 # Project Title
 
-Simple overview of use/purpose.
+* CHIPPIN
+- A web-application built with users in mind. 
+    Chippin' is a group collaboration platform that allows users to pool funds together for things like: Birthday gifts, Company / Family trips and excursions as well as simple collaborative funding in an easy to use and friendly tool.
 
 ## Description
 
@@ -37,8 +39,19 @@ command to run if program contains helper info
 
 Contributors names and contact info
 
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
+* Heqian (Michael) Liu - Developer
+-------Contact:
+
+* Dmitri Golota - Developer
+-------Contact: (https://golota.ca)
+
+* Subin Moon - Developer
+-------Contact: 
+
+* Heejung (Heather) Lee - Developer
+------Contact:
+ 
+
 
 ## Version History
 
@@ -55,8 +68,3 @@ This project is licensed under the [NAME HERE] License - see the LICENSE.md file
 ## Acknowledgments
 
 Inspiration, code snippets, etc.
-* [awesome-readme](https://github.com/matiassingers/awesome-readme)
-* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* [dbader](https://github.com/dbader/readme-template)
-* [zenorocha](https://gist.github.com/zenorocha/4526327)
-* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
