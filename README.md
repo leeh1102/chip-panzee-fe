@@ -1,43 +1,43 @@
 # Project Title
 
 * CHIPPIN
-- A web-application built with users in mind. 
-    Chippin' is a group collaboration platform that allows users to pool funds together for things like: Birthday gifts, Company / Family trips and excursions as well as simple collaborative funding in an easy to use and friendly tool.
+
 
 ## Description
 
-An in-depth paragraph about your project and overview of use.
+- A web-application built with users in mind. 
+    Chippin' is a group collaboration platform that allows users to pool funds together for things like: Birthday gifts, Company / Family trips and excursions as well as simple collaborative funding in an easy to use and friendly tool.
 
 ## Getting Started
 
 ### Dependencies
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
+To interact with our repository:
+* Node.js
+* Express.js
+* REACT
 
-### Installing
-
-* How/where to download your program
-* Any modifications needed to be made to files/folders
 
 ### Executing program
 
-* How to run the program
-* Step-by-step bullets
-```
-code blocks for commands
-```
+* To interact as a user Visit:
+https://chippinzee.com
+
 
 ## Help
 
-Any advise for common problems or issues.
+For any questions, comments or concerns / feedback please contact any of the devs below or contact:
+
+- dmitri.golota.ca
+
+
 ```
 command to run if program contains helper info
 ```
 
 ## Authors
 
-Contributors names and contact info
+Contributors names and contact info:
 
 * Heqian (Michael) Liu - Developer
 -------Contact:
@@ -55,15 +55,12 @@ Contributors names and contact info
 
 ## Version History
 
-* 0.2
-    * Various bug fixes and optimizations
-    * See [commit change]() or See [release history]()
 * 0.1
     * Initial Release
 
 ## License
 
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
+TBD
 
 ## Acknowledgments
 
