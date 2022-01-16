@@ -36,3 +36,7 @@
 .uploadFileIcon {
     display: none;
 }
+
+.submitButton {
+    background-color: #C9411D;
+}
