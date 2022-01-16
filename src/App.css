@@ -50,7 +50,7 @@
 
   /*================ VARIABLE CSS ================*/
 :root {
-  --header-height: 3rem;
+  --header-height: 1rem;
 
   /*=========== Colors ===========*/
   --mayo-navy-color: #363773;
@@ -85,4 +85,9 @@ body {
   font-family: "Kollektif";
   font-size: var(--body-font-size);
   background-color: var(--mayo-yellow-color);
+}
+
+.img-logo {
+  margin: var(--header-height) 0 0 0;
+  width: 200px;
 }

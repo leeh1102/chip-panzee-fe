@@ -1,6 +1,8 @@
 import './App.css';
 import $ from 'jquery';
 import Button from '@material-ui/core/Button';
+import Logo from './assets/logo.png';
+
 function App() {
   $.ajax({
     url: "http://localhost:2000/DM3H7P",
@@ -8,16 +10,18 @@ function App() {
     crossDomain: true,
     dataType: "json",
     success: function (response) {
-        console.log(response);
+      console.log(response);
     },
     error: function (xhr, status) {
-        console.log("error");
+      console.log("error");
     }
   });
 
   return (
     <div className="App">
-      <Button variant="contained">你好，世界</Button>
+      <header className="header-logo">
+        <img className="img-logo" src={Logo} alt="Chippin Logo" />
+      </header>
     </div>
   );
 }

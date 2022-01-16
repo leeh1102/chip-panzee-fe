@@ -4,7 +4,7 @@ import styles from './PostCreateComponent.module.css';
 
 const PostCreateComponent = () => (
   <div className={styles.PostCreateComponent}>
-    PostCreateComponent Component
+    PostCreateComponent Component1
   </div>
 );
 
