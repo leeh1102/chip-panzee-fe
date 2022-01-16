@@ -2,7 +2,9 @@ import './App.css';
 import $ from 'jquery';
 import CommentComponent from './components/CommentComponent/CommentComponent.js';
 import ConfirmationDeleteComponent from './components/ConfirmationDeleteComponent/ConfirmationDeleteComponent.js'
+import RobotCheckComponent from './components/RobotCheckComponent/RobotCheckComponent.js'
 import Logo from './assets/logo.png';
+
 
 function App() {
   // $.ajax({
@@ -18,8 +20,10 @@ function App() {
   //   }
   // });
 
+
   return (
     <div className="App">
+      <RobotCheckComponent/>
     </div>
   );
 }
