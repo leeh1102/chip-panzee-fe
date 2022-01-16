@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './PostCreateComponent.module.css';
+import '../../App.css';
 
 const PostCreateComponent = () => (
   <div className={styles.PostCreateComponent}>
@@ -15,8 +16,6 @@ const PostCreateComponent = () => (
       <hr className={styles.PostCreateTitleHr} />
 
     </div>
-
-
 
   </div>
 );

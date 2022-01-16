@@ -15,7 +15,6 @@
 }
 
 .PostCreateTitleHr {
-    display: block;
-    margin-top: 2rem;
     border-color: #000000;
+    border-radius: 60%;
 }
