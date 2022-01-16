@@ -1,11 +1,15 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styles from './PostDetailComponent.module.css';
+import image from '../../assets/Edit_icon.png';
+import { faMobileAlt } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import CommentComponent from '../CommentComponent/CommentComponent.js';
 
-const PostDetailComponent = () => (
+const PostDetailComponent = ({post, setPost}) => (
   <div className={styles.PostDetailComponent}>
     <div className={styles.PostDetailComponentTopEditBar}>
-      <img src={require('./Edit_icon.png')} className={styles.PostDetailComponentEditIcon}/>
+      <img src={image} className={styles.PostDetailComponentEditIcon}/>
       <div className={styles.PostDetailComponentEditText}> 
       Edit
       </div>
@@ -15,43 +19,64 @@ const PostDetailComponent = () => (
       {/* TODO: image upload component*/}
     </div>
     <div>
-      {/* TODO: Title of the page */}
+      {post && post.name &&
+        <h1>{post.name}</h1>
+      }
     </div>
-    <div className={styles.PostDetailComponent.OrganizerName}>
-      {/* organized by {props.name} */}
+    <div className={styles.PostDetailComponentOrganizerName}>
+      {post && post.owner &&
+        <p>Organized by {post.owner}</p>
+      }
     </div>
     <hr/>
-    <div className={styles.PostDetailComponent.PriceUpdate}> 
-      {/* "${props.chippedIn} / ${props.tartgetAmount}" */}
+    <div className={styles.PostDetailComponentPriceUpdate}> 
+      <div className={styles.PostDetailComponentPriceLeft}> 
+        <h4>Chip-in Amount</h4>
+        {post && post.price &&
+          <h1>&#36;{Math.ceil(post.price * 100 / post.numberOfPeople) / 100}</h1>
+        }
+      </div>
+      <div className={styles.PostDetailComponentPriceRight}>
+        <h4>Target Amount</h4>
+        {post && post.price &&
+          <h1>&#36;{post.price}</h1>
+        }
+      </div>
     </div>
-    <div className={styles.PostDetailComponent.DiscriptionTitle}>
-      📌 Description
+    <div className={styles.PostDetailComponentDescriptionTitle}>
+      📌 Description <br/>
+      {post && post.description &&
+        <p>{post.description}</p>
+      }
     </div>
-    <div className={styles.PostDetailComponent.Discription}>
-      {/* {props.description} */}
-      <br/>
-    </div>
-    <div className={styles.PostDetailComponent.Url}>
-      🔗 URL 
+
+    <div className={styles.PostDetailComponentUrl}>
+      🔗 URL
+      {post && post.url &&
+        <p>{post.url}</p>
+      }
     </div> 
-    <div className={styles.PostDetailComponent.UrlAddress}>
+    <div className={styles.PostDetailComponentUrlAddress}>
             {/* {props.urlAddress} */}
             <br/>
     </div>
 
-    <div className='eTransferInfo'>
+    <div className={styles.PostDetailComponentETransferInfoSection}>
       💸 E-Transfer Information
-      <br/>
+      <div className={styles.PostDetailComponentInfo}>
+        <div className={styles.PostDetailComponentPhoneNum}>
+          {post && post.bankPhone &&
+            <h5><FontAwesomeIcon icon={faMobileAlt} />&nbsp;{post.bankPhone}</h5>
+          }
+        </div>
+        <div className={styles.PostDetailComponentEmailaddress}>
+          {post && post.bankEmail &&
+            <h5><FontAwesomeIcon icon={faEnvelope} />&nbsp;{post.bankEmail}</h5>
+          }
+        </div>
+      </div>
     </div>
-    <div className='phoneNum'>
-      "PhoneNumber": 
-    </div>
-    <div className='emailaddress'>
-      "Email Address"
-
-    </div>
-
-
+    <CommentComponent post={post} stateChanger={setPost} />
   </div>
 );
 

@@ -1,17 +1,49 @@
 .PostDetailComponent {
-
+    background-color: #FFFBEA;
+    padding: 10px 0;
 }
-/* .PostDetailComponentEditIcon {
-    font-size: 1.5rem;
-    display: flex;
- 
-}
-.PostDetailComponentEditText{
-    font-size: 15px;
-    display: flex;
-} */
 
-.PostDetailComponentTopEditBar{
+.PostDetailComponentPriceUpdate {
+    display:flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+.PostDetailComponentPriceLeft, 
+.PostDetailComponentPriceRight {
+    padding: 0px 25px;
+}
+
+.PostDetailComponentPriceLeft > h1 {
+    text-align: right;
+}
+
+.PostDetailComponentPriceRight > h1 {
+    text-align: left;
+}
+
+.PostDetailComponentDescriptionTitle > p {
+    width: 40%;
+    margin-left: 30%;
+    font-size: 14px;
+    margin-top: 5px;
+    color: #878268;    
+    text-align: center;
+}
+
+.PostDetailComponentInfo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #878268;    
+    margin-top: 5px;
+}
+
+.PostDetailComponentPhoneNum {
+    margin-right: 15%;    
+}
+
+.PostDetailComponentTopEditBar {
     display: flex;
     font-size:1.3rem;
     align-items: center;
@@ -22,4 +54,14 @@
 .PostDetailComponentEditIcon{
     height: 1em;
     padding-right: 5px;
+}
+
+.PostDetailComponentUrl {
+    margin-top: 10px;
+}
+
+.PostDetailComponentUrl > p {
+    margin-top: 5px;
+    color: #878268; 
+    font-size: 14px;
 }
