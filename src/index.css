@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  background-color: #F0DA3B;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -12,16 +13,15 @@ body {
   src: url(./fonts/BobbyJonesSoft.otf);
 }
 
-@font-face {
-  font-family: "Kollektif";
-  src: url(./fonts/Kollektif.ttf);
-}
-
 
 .Logo {
   position: relative;
   margin: auto;
   align-content: center;
+}
+
+Header {
+  background-color: #F0DA3B !important;
 }
 
 code {
