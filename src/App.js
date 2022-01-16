@@ -15,13 +15,12 @@ function App() {
     getPost();
   }, []);
   async function getPost() {
-    const response = await axios.get("http://localhost:2000/TDQ575");
+    const response = await axios.get("http://localhost:2000/URHCFL?passcode=asdddd");
     setPost(response.data);
   }
   return (
     <div className="App">
       <PostDetailComponent post={post} setPost={setPost}/>
-      
     </div>
   );
 }
