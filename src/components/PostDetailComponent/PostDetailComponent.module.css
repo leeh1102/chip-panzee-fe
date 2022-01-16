@@ -1,6 +1,7 @@
 .PostDetailComponent {
     background-color: #FFFBEA;
     padding: 10px 0;
+    border-radius: 50px;
 }
 
 .PostDetailComponentPriceUpdate {
