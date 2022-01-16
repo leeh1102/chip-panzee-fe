@@ -36,3 +36,53 @@
     transform: rotate(360deg);
   }
 }
+
+/*================ FONT FAMILY ================*/
+@font-face {
+  font-family: "BobbyJonesSoft";
+  src: local("BobbyJonesSoft"), url(./fonts/BobbyJonesSoft.otf) format("truetype");
+}
+
+@font-face {
+  font-family: "Kollektif";
+  src: local("Kollektif"), url(./fonts/Kollektif.ttf) format("truetype");
+}
+
+  /*================ VARIABLE CSS ================*/
+:root {
+  --header-height: 3rem;
+
+  /*=========== Colors ===========*/
+  --mayo-navy-color: #363773;
+  --mayo-yellow-color: #F0DA3B;
+  --mayo-ivory-color: #FFFBEA;
+  --mayo-red-color: #C9411D;
+  --text-color: #000000;
+  --text-grey-color: #8A887F;
+
+  /*=========== Font Size ===========*/
+  --big-font-size: 2rem;
+  --body-font-size: 1rem;
+  --small-font-size: .75rem;
+}
+
+/*=========== Button ===========*/
+  
+  
+/*================ BASE ================*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0 0 var(--header-height) 0;
+  font-family: "Kollektif";
+  font-size: var(--body-font-size);
+  background-color: var(--mayo-yellow-color);
+}
