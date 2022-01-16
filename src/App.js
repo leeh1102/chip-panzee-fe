@@ -1,5 +1,5 @@
 import './App.css';
-import Header from './Header';
+import Header from './components/Header';
 import $ from 'jquery';
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
         console.log(response);
     },
     error: function (xhr, status) {
-        alert("error");
+        console.log("error");
     }
   });
 
