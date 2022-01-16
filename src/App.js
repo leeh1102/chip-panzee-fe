@@ -20,8 +20,10 @@ function App() {
   }
   return (
     <div className="App">
-      <PostDetailComponent post={post} setPost={setPost}/>
-      
+      {/* <PostDetailComponent post={post} setPost={setPost}/>
+       */}
+      <PostCreateComponent />
+
     </div>
   );
 }

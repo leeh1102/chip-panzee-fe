@@ -1,9 +1,5 @@
-import React from 'react';
-<<<<<<< HEAD
-import styles from './PostCreateComponent.module.css'
-=======
+import React, { useState, useEffect } from 'react';
 import styles from './PostCreateComponent.module.css';
->>>>>>> f3dbd3a2d81c0d16acd4366e4d35c5992f63427a
 import RobotCheckComponent from '../RobotCheckComponent/RobotCheckComponent';
 
 import Box from '@mui/material/Box';
@@ -13,31 +9,76 @@ import { Input } from '@mui/material';
 import { Container, IconButton } from '@mui/material';
 import PhotoCameraIcon from '@mui/icons-material/PhotoCamera.js';
 import Button from '@mui/material/Button';
+import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from 'react-simple-captcha';
+import axios from 'axios';
 
-//TODO Function to detect either one of the e-transfer information is filled; if both are not filled, the form can't be submitted.
-
-// TODO Display the captcha when the user submit it 
-const submitted = true;
 
 export default function PostCreateComponent() {
+  const [imgBase64, setImgBase64] = useState([]);
+  const [imgFile, setImgFile] = useState(null);
+
+  const handleChangeFile = (event) => {
+    console.log(event.target.files);
+    setImgFile(event.target.files);
+    setImgBase64([]);
+    for (var i = 0; i < event.target.files.length; i++) {
+      let reader = new FileReader();
+      reader.readAsDataURL(event.target.files[i]);
+      reader.onloadend = () => {
+        const base64 = reader.result;
+        console.log(base64);
+        if (base64) {
+          var base64sub = base64.toString();
+          setImgBase64(imgBase64 => [...imgBase64, base64sub]);
+        }
+      }
+    }
+    return event.target.files;
+  }
+
+
   const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-
-    // const captcha = document.getElementsByClassName('robotCheckComponent')[0];
-
-    // captcha.style.display = 'block';
-
-    console.log({
-      name: data.get('userName'),
-      passcode: data.get('passcode'),
-    });
-
-
+    let image = handleChangeFile();
+    let user_captcha = document.getElementById('user_captcha_input').value;
+    if (validateCaptcha(user_captcha) == true) {
+      // Submitform
+      if (event) {
+        event.preventDefault();
+        const data = new FormData(event.currentTarget);
+        const body = {
+          name: data.get('userName'),
+          passcodeContent: data.get('passcode'),
+          description: data.get('description'),
+          price: data.get('fullAmount'),
+          numberOfPeople: data.get('numOfPals'),
+          bankEmail: data.get('email'),
+          bankPhone: data.get('phoneNumber'),
+          image: image
+        };
+        console.log(data.get('postImage'));
+        axios.post("http://localhost:2000", body)
+          .then((res) => {
+            alert("created");
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      }
+      loadCaptchaEnginge(6);
+      document.getElementById('user_captcha_input').value = "";
+      return true;
+    }
+    else {
+      document.getElementById('user_captcha_input').value = "";
+      return false;
+    }
   };
 
-  return (
+  useEffect(() => {
+    loadCaptchaEnginge(6);
+  }, []);
 
+  return (
     <Container maxWidth="xs">
       <Box
         sx={{
@@ -58,7 +99,7 @@ export default function PostCreateComponent() {
           <Grid container spacing={2}>
             <Grid item xs={12} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
               <div className={styles.uploadFile}>
-                <Input accept="image/*" className={styles.uploadFileInput} id="icon-button-file" type="file" sx={{ display: 'none' }} />
+                <input accept="image/*" id="icon-button-file" type="file" name="postImage" onChange={handleChangeFile} multiple="multiple" />
                 <IconButton color="primary" className={styles.photoCameraIcon} aria-label="upload picture" component="span">
                   <PhotoCameraIcon />
                 </IconButton>
@@ -165,8 +206,21 @@ export default function PostCreateComponent() {
               />
             </Grid>
           </Grid>
-          <Grid item xs={12} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            {submitted && <RobotCheckComponent />}
+          <Grid item xs={12} sx={{ marginTop: 4, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <div>
+              <div className={styles.contain}>
+                <div className="form-group">
+                  <div className={styles.capt}>
+                    <LoadCanvasTemplate />
+                  </div>
+                  <div className="col mt-3">
+                    <div>
+                      <input placeholder="Enter Captcha" className={styles.textinput} id="user_captcha_input" name="user_captcha_input" type="text"></input>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </Grid>
           <Button
             className={styles.submitButton}
