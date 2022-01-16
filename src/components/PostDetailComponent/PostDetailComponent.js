@@ -1,19 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './PostDetailComponent.module.css';
 import image from '../../assets/Edit_icon.png';
 import { faMobileAlt } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import CommentComponent from '../CommentComponent/CommentComponent.js';
+import Popup from './PassCodeModal';
 
-const PostDetailComponent = ({post, setPost}) => (
-  <div className={styles.PostDetailComponent}>
+const PostDetailComponent = ({post, setPost}) => {
+  const [buttonPopup, setButtonPopup] = useState(true);
+  return (<div className={styles.PostDetailComponent}>
     <div className={styles.PostDetailComponentTopEditBar}>
       <img src={image} className={styles.PostDetailComponentEditIcon}/>
       <div className={styles.PostDetailComponentEditText}> 
       Edit
       </div>
     </div>
+
+    <Popup trigger={buttonPopup}>
+          <div className={styles.PasscodePopup}>
+            <p>Enter your passcode</p>
+            <input type="password" className={styles.PasscodePopupInput}/>
+            <button>Come on in!</button>
+          </div>
+    </Popup>
 
     <div className={styles.PostDetailComponentImageUpload}>
       {/* TODO: image upload component*/}
@@ -77,9 +87,8 @@ const PostDetailComponent = ({post, setPost}) => (
       </div>
     </div>
     <CommentComponent post={post} stateChanger={setPost} />
-  </div>
-);
-
+  </div>);
+}
 
 
 
