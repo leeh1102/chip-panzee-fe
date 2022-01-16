@@ -58,5 +58,8 @@
     "@babel/eslint-parser": "^7.16.5",
     "eslint": "^8.6.0",
     "eslint-plugin-flowtype": "^8.0.3"
+  },
+  "resolutions": {
+    "mini-css-extract-plugin": "~2.4.5"
   }
 }
