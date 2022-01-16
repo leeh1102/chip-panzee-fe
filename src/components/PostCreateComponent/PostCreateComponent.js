@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-=======
-import React from 'react';
->>>>>>> 44c34ee6e6582eb26d1a46611aed27360c238764
+import React, { useEffect } from 'react';
 import styles from './PostCreateComponent.module.css';
 import RobotCheckComponent from '../RobotCheckComponent/RobotCheckComponent';
 
@@ -18,31 +14,31 @@ import axios from 'axios';
 
 
 export default function PostCreateComponent() {
-  const [imgBase64, setImgBase64] = useState([]);
-  const [imgFile, setImgFile] = useState(null);
+  // const [imgBase64, setImgBase64] = useState([]);
+  // const [imgFile, setImgFile] = useState(null);
 
-  const handleChangeFile = (event) => {
-    console.log(event.target.files);
-    setImgFile(event.target.files);
-    setImgBase64([]);
-    for (var i = 0; i < event.target.files.length; i++) {
-      let reader = new FileReader();
-      reader.readAsDataURL(event.target.files[i]);
-      reader.onloadend = () => {
-        const base64 = reader.result;
-        console.log(base64);
-        if (base64) {
-          var base64sub = base64.toString();
-          setImgBase64(imgBase64 => [...imgBase64, base64sub]);
-        }
-      }
-    }
-    return event.target.files;
-  }
+  // const handleChangeFile = (event) => {
+  //   console.log(event.target.files);
+  //   setImgFile(event.target.files);
+  //   setImgBase64([]);
+  //   for (var i = 0; i < event.target.files.length; i++) {
+  //     let reader = new FileReader();
+  //     reader.readAsDataURL(event.target.files[i]);
+  //     reader.onloadend = () => {
+  //       const base64 = reader.result;
+  //       console.log(base64);
+  //       if (base64) {
+  //         var base64sub = base64.toString();
+  //         setImgBase64(imgBase64 => [...imgBase64, base64sub]);
+  //       }
+  //     }
+  //   }
+  //   return event.target.files;
+  // }
 
 
   const handleSubmit = (event) => {
-    let image = handleChangeFile();
+    // let image = handleChangeFile();
     let user_captcha = document.getElementById('user_captcha_input').value;
     if (validateCaptcha(user_captcha) == true) {
       // Submitform
@@ -56,13 +52,13 @@ export default function PostCreateComponent() {
           price: data.get('fullAmount'),
           numberOfPeople: data.get('numOfPals'),
           bankEmail: data.get('email'),
-          bankPhone: data.get('phoneNumber'),
-          image: image
+          bankPhone: data.get('phoneNumber')
+          // image: image
         };
         console.log(data.get('postImage'));
         axios.post("http://localhost:2000", body)
           .then((res) => {
-            alert("created");
+            alert("Your post is created!");
           })
           .catch((err) => {
             console.log(err);
@@ -103,7 +99,7 @@ export default function PostCreateComponent() {
           <Grid container spacing={2}>
             <Grid item xs={12} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
               <div className={styles.uploadFile}>
-                <input accept="image/*" id="icon-button-file" type="file" name="postImage" onChange={handleChangeFile} multiple="multiple" />
+                <input accept="image/*" id="icon-button-file" type="file" name="postImage" multiple="multiple" />
                 <IconButton color="primary" className={styles.photoCameraIcon} aria-label="upload picture" component="span">
                   <PhotoCameraIcon />
                 </IconButton>

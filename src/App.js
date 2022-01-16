@@ -20,15 +20,11 @@ function App() {
   }
   return (
     <div className="App">
-<<<<<<< HEAD
-      {/* <PostDetailComponent post={post} setPost={setPost}/>
-       */}
-      <PostCreateComponent />
-
-=======
+      <header>
+        <img src={Logo} alt='Chippin Logo' id='logo' />
+      </header>
       {/* <PostDetailComponent post={post} setPost={setPost}/> */}
-      <PostDetailComponent/>
->>>>>>> 44c34ee6e6582eb26d1a46611aed27360c238764
+      <PostCreateComponent />
     </div>
   );
 }

@@ -30,10 +30,6 @@ class RobotCheckComponent extends Component {
   };
 
   render() {
-<<<<<<< HEAD
-=======
-
->>>>>>> 44c34ee6e6582eb26d1a46611aed27360c238764
     return (<div>
       <div className={styles.contain}>
         <div className="form-group">
@@ -44,14 +40,11 @@ class RobotCheckComponent extends Component {
             <div>
               <input placeholder="Enter Captcha" className={styles.textinput} id="user_captcha_input" name="user_captcha_input" type="text"></input>
             </div>
-<<<<<<< HEAD
-=======
             <button class="btn btn-primary" onClick={() => this.doSubmit()}><p>Submit</p></button>
->>>>>>> 44c34ee6e6582eb26d1a46611aed27360c238764
-          </div>
-        </div>
-      </div>
-    </div>);
+          </div >
+        </div >
+      </div >
+    </div >);
   };
 }
 
