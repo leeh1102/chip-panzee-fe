@@ -47,7 +47,7 @@ export default function ShareBtnsComponent() {
 
   return (
     <div>
-      <Button onClick={handleOpen}>Share</Button>
+      <Button onClick={handleOpen} color="inherit">Share</Button>
       <Modal
         open={open}
         onClose={handleClose}

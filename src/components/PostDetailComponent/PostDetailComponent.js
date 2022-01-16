@@ -15,7 +15,7 @@ const PostDetailComponent = ({post, setPost}) => {
   return (<div className={styles.PostDetailComponent}>
     <div className={styles.PostDetailComponentTopEditBar}>
       <div className={styles.PostDetailComponentEditText}> 
-      <Button variant="outlined" startIcon={<ShareIcon/>}>
+      <Button variant="outlined" color="inherit" startIcon={<ShareIcon/>}>
         <ShareBtnsComponent/>
       </Button>
       </div>
