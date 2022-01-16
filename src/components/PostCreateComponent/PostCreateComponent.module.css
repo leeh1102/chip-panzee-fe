@@ -1,1 +1,20 @@
-.PostCreateComponent {}
+.PostCreateComponent {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.PostCreateComponentTitle {
+    color: #363773;
+}
+
+.PostCreateDescription {
+    margin-top: 1rem;
+    width: 350px;
+}
+
+.PostCreateTitleHr {
+    border-color: #000000;
+    border-radius: 60%;
+}

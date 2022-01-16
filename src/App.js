@@ -3,7 +3,9 @@ import React, { useState } from "react";
 import axios from "axios";
 import CommentComponent from './components/CommentComponent/CommentComponent.js';
 import ConfirmationDeleteComponent from './components/ConfirmationDeleteComponent/ConfirmationDeleteComponent.js'
+import RobotCheckComponent from './components/RobotCheckComponent/RobotCheckComponent.js'
 import Logo from './assets/logo.png';
+
 
 function App() {
   const [post, setPost] = React.useState(null);
