@@ -31,7 +31,7 @@ export default function PostCreateComponent() {
           // image: image
         };
         console.log(data.get('postImage'));
-        axios.post("/api", body)
+        axios.post("http://www.chippinzee.com:2000/api", body)
           .then((res) => {
             const uri = "/view/" + res.data.id;
             navigate(uri);
