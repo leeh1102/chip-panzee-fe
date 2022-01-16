@@ -91,7 +91,7 @@ body {
   background-color: var(--mayo-yellow-color);
 }
 
-.img-logo {
+#logo {
   margin: var(--header-height) 0 0 0;
   width: 200px;
 }

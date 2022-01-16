@@ -21,6 +21,11 @@ function App() {
   return (
     <div className="App">
       <PostDetailComponent post={post} setPost={setPost}/>
+      <header>
+        <img src={Logo} alt='Chippin Logo' id='logo' />
+      </header>
+      {/* <PostDetailComponent post={post} setPost={setPost}/> */}
+      <PostCreateComponent />
     </div>
   );
 }
