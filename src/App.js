@@ -1,7 +1,6 @@
 import './App.css';
-import Header from './components/Header';
 import $ from 'jquery';
-
+import Button from '@material-ui/core/Button';
 function App() {
   $.ajax({
     url: "http://localhost:2000/DM3H7P",
@@ -18,7 +17,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
+      <Button variant="contained">你好，世界</Button>
     </div>
   );
 }
