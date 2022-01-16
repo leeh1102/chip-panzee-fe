@@ -1,6 +1,7 @@
 import './App.css';
 import $ from 'jquery';
 import CommentComponent from './components/CommentComponent/CommentComponent.js';
+import Logo from './assets/logo.png';
 
 function App() {
   // $.ajax({
@@ -18,6 +19,9 @@ function App() {
 
   return (
     <div className="App">
+      <header className="header-logo">
+        <img className="img-logo" src={Logo} alt="Chippin Logo" />
+      </header>
     </div>
   );
 }
