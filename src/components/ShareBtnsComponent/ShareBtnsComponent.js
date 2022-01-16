@@ -47,7 +47,7 @@ export default function ShareBtnsComponent() {
 
   return (
     <div>
-      <Button onClick={handleOpen}>Share</Button>
+      <Button onClick={handleOpen} color="inherit">Share</Button>
       <Modal
         open={open}
         onClose={handleClose}
@@ -62,27 +62,27 @@ export default function ShareBtnsComponent() {
           </div>
           <div>
             <div className={styles.sharebutton}>
-              <EmailShareButton className={styles.sharebutton} url="www.google.ca" subject='Chippin with me!' body={emailbody} separator='   '>
+              <EmailShareButton className={styles.sharebutton} url={currentlink}  subject='Chippin with me!' body={emailbody} separator='   '>
                 <EmailIcon size={iconsize} round={true} />
               </EmailShareButton>
             </div>
             <div className={styles.sharebutton}>
-              <TwitterShareButton url="www.google.ca" >
+              <TwitterShareButton url={currentlink}  >
                 <TwitterIcon size={iconsize} round={true} />
               </TwitterShareButton>
             </div>
             <div className={styles.sharebutton}>
-              <FacebookShareButton url="www.google.ca" >
+              <FacebookShareButton url={currentlink} >
                 <FacebookIcon size={iconsize} round={true} />
               </FacebookShareButton>
             </div>
             <div className={styles.sharebutton}>
-              <WhatsappShareButton url="www.google.ca">
+              <WhatsappShareButton url={currentlink} >
                 <WhatsappIcon size={iconsize} round={true} />
               </WhatsappShareButton>
             </div>
             <div className={styles.sharebutton}>
-              <LinkedinShareButton url='www.google.ca'>
+              <LinkedinShareButton url={currentlink} >
                 <LinkedinIcon size={iconsize} round={true} />
               </LinkedinShareButton>
             </div>
