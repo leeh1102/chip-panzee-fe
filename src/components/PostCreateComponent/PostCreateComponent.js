@@ -1,27 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './PostCreateComponent.module.css';
+import RobotCheckComponent from '../RobotCheckComponent/RobotCheckComponent';
 
 import Box from '@mui/material/Box';
 import { Grid } from '@mui/material';
 import { TextField } from '@mui/material';
-import { useFormControl } from '@mui/material/FormControl';
-
-import Input from '@mui/material/Input';
-import { Container, IconButton, Typography } from '@mui/material';
+import { Input } from '@mui/material';
+import { Container, IconButton } from '@mui/material';
 import PhotoCameraIcon from '@mui/icons-material/PhotoCamera.js';
 import Button from '@mui/material/Button';
 
 //TODO Function to detect either one of the e-transfer information is filled; if both are not filled, the form can't be submitted.
 
+
 export default function PostCreateComponent() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
+
     console.log({
-      name: data.get('name'),
+      name: data.get('userName'),
       passcode: data.get('passcode'),
     });
+
+
   };
 
   return (
@@ -46,7 +49,7 @@ export default function PostCreateComponent() {
           <Grid container spacing={2}>
             <Grid item xs={12} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
               <div className={styles.uploadFile}>
-                <Input accept="image/*" className={styles.uploadFileIcon} type="file" />
+                <Input accept="image/*" className={styles.uploadFileInput} id="icon-button-file" type="file" />
                 <IconButton color="primary" className={styles.photoCameraIcon} aria-label="upload picture" component="span">
                   <PhotoCameraIcon />
                 </IconButton>
@@ -70,6 +73,7 @@ export default function PostCreateComponent() {
                 id="passcode"
                 label="PASSCODE"
                 name="passcode"
+                type="password"
                 variant="standard"
               />
             </Grid>
@@ -120,7 +124,6 @@ export default function PostCreateComponent() {
             </Grid>
             <Grid item xs={12}>
               <TextField
-                required
                 fullWidth
                 id="detailURL"
                 label="PRODUCT DETAIL WEBSITE URL"
@@ -152,6 +155,9 @@ export default function PostCreateComponent() {
                 variant="standard"
               />
             </Grid>
+          </Grid>
+          <Grid item xs={12} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <RobotCheckComponent />
           </Grid>
           <Button
             className={styles.submitButton}
