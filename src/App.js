@@ -20,11 +20,16 @@ function App() {
   }
   return (
     <div className="App">
+<<<<<<< HEAD
       <header>
         <img src={Logo} alt='Chippin Logo' id='logo' />
       </header>
       {/* <PostDetailComponent post={post} setPost={setPost}/> */}
       <PostCreateComponent />
+=======
+      {/* <PostDetailComponent post={post} setPost={setPost}/> */}
+      <PostDetailComponent/>
+>>>>>>> 9ed50c4fc8d49614cab921deeb5a852836aa9390
     </div>
   );
 }
