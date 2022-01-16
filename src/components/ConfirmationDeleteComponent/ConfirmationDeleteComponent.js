@@ -11,12 +11,12 @@ const ConfirmationDeleteComponent = () => (
         </div>
 
         <div className={styles.congrats}>
-            <FontAwesomeIcon icon={faGlassCheers} /><h3>Congratulations!</h3><FontAwesomeIcon icon={faGlassCheers} />
+            <h3>🎉 Congratulations! 🎉</h3>
         </div>
 
         <div className={styles.success}>
             <h3>Your post has been successfully been deleted.</h3>
-            <h3>See you next time!</h3><FontAwesomeIcon icon={faWaveSquare} />
+            <h3>See you next time! 👋</h3>
         </div>
 
     </div>

@@ -4,46 +4,17 @@ import styles from './ShareBtnsComponent.module.css';
 import {
   EmailShareButton,
   FacebookShareButton,
-  InstapaperShareButton,
-  LineShareButton,
   LinkedinShareButton,
-  LivejournalShareButton,
-  MailruShareButton,
-  OKShareButton,
-  PinterestShareButton,
-  PocketShareButton,
-  RedditShareButton,
-  TelegramShareButton,
-  TumblrShareButton,
   TwitterShareButton,
-  ViberShareButton,
-  VKShareButton,
   WhatsappShareButton,
-  WorkplaceShareButton
 } from "react-share";
 
 import {
   EmailIcon,
   FacebookIcon,
-  FacebookMessengerIcon,
-  HatenaIcon,
-  InstapaperIcon,
-  LineIcon,
   LinkedinIcon,
-  LivejournalIcon,
-  MailruIcon,
-  OKIcon,
-  PinterestIcon,
-  PocketIcon,
-  RedditIcon,
-  TelegramIcon,
-  TumblrIcon,
   TwitterIcon,
-  ViberIcon,
-  VKIcon,
-  WeiboIcon,
   WhatsappIcon,
-  WorkplaceIcon
 } from "react-share";
 
 const iconsize = 50;
@@ -55,7 +26,7 @@ const ShareBtnsComponent = () => (
   <div className={styles.ShareBtnsComponent}>
 
     <div className={styles.sharetitle}>
-      <h3>Share this link via</h3>
+      <h3>Share this link via:</h3>
     </div>
     <div>
       <div className={styles.sharebutton}>
@@ -72,11 +43,6 @@ const ShareBtnsComponent = () => (
         <FacebookShareButton url="www.google.ca" >
           <FacebookIcon size={iconsize} round={true} />
         </FacebookShareButton>
-      </div>
-      <div className={styles.sharebutton}>
-        <InstapaperShareButton url="www.google.ca">
-          <InstapaperIcon size={iconsize} round={true} />
-        </InstapaperShareButton>
       </div>
       <div className={styles.sharebutton}>
         <WhatsappShareButton url="www.google.ca">
