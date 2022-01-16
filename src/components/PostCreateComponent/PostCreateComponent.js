@@ -11,6 +11,7 @@ import PhotoCameraIcon from '@mui/icons-material/PhotoCamera.js';
 import Button from '@mui/material/Button';
 import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from 'react-simple-captcha';
 import axios from 'axios';
+import Logo from './assets/logo.png';
 
 
 export default function PostCreateComponent() {
