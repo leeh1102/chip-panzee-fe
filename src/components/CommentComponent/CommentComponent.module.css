@@ -1,1 +1,3 @@
-.CommentComponent {}
+.CommentComponent {
+    border: 1px solid black;
+}
