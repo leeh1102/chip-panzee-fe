@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import CommentComponent from './components/CommentComponent/CommentComponent.js';
 import ConfirmationDeleteComponent from './components/ConfirmationDeleteComponent/ConfirmationDeleteComponent.js'
@@ -8,8 +8,8 @@ import Logo from './assets/logo.png';
 
 
 function App() {
-  const [post, setPost] = React.useState(null);
-  React.useEffect(() => {
+  const [post, setPost] = useState(null);
+  useEffect(() => {
     getPost();
   }, []);
   async function getPost() {
@@ -19,6 +19,8 @@ function App() {
   return (
     <div>
       <CommentComponent post={post} stateChanger={setPost} />
+      <br></br>
+      <RobotCheckComponent />
     </div>
   );
 }
