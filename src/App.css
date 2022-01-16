@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  width: 700px;
+  margin-left: calc(50% - 350px);
+  border: 1px solid black;
 }
 
 .App-logo {
@@ -56,6 +59,7 @@
   --mayo-navy-color: #363773;
   --mayo-yellow-color: #F0DA3B;
   --mayo-ivory-color: #FFFBEA;
+  --mayo-yellow-background-color: #faf1c0;
   --mayo-red-color: #C9411D;
   --text-color: #000000;
   --text-grey-color: #8A887F;
