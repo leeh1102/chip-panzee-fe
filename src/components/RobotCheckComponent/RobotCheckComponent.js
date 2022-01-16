@@ -5,21 +5,6 @@ import { style } from '@mui/system';
 import { loadCaptchaEnginge, LoadCanvasTemplate, LoadCanvasTemplateNoReload, validateCaptcha } from 'react-simple-captcha';
 import { render } from '@testing-library/react';
 
-// loadCaptchaEnginge(6); 
-
-// const RobotCheckComponent = () => (
-
-//   <div className={styles.RobotCheckComponent}>
-//     <div>
-//       <h3>Captcha</h3>
-//     </div>
-//     <div>
-//     <LoadCanvasTemplate />
-//     </div>
-//   </div>
-
-// );
-
 class RobotCheckComponent extends Component {
 
   componentDidMount() {
@@ -44,7 +29,6 @@ class RobotCheckComponent extends Component {
 
   render() {
 
-
     return (<div>
       <div className={styles.contain}>
         <div className="form-group">
@@ -57,7 +41,7 @@ class RobotCheckComponent extends Component {
             <div>
               <input placeholder="Enter Captcha" className={styles.textinput} id="user_captcha_input" name="user_captcha_input" type="text"></input>
             </div>
-            <button className="btn btn-primary" onClick={() => this.doSubmit()}><p>Submit</p></button>
+            <button class="btn btn-primary" onClick={() => this.doSubmit()}><p>Submit</p></button>
           </div>
 
         </div>

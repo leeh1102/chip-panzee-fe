@@ -1,9 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-import styles from './PostCreateComponent.module.css'
-=======
 import styles from './PostCreateComponent.module.css';
->>>>>>> f3dbd3a2d81c0d16acd4366e4d35c5992f63427a
 import RobotCheckComponent from '../RobotCheckComponent/RobotCheckComponent';
 
 import Box from '@mui/material/Box';
