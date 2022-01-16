@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Header() {
   const displayDesktop = () => {
-    return <Toolbar>CHIPPIN'</Toolbar>;
+    return <Toolbar id="title" >CHIPPIN'</Toolbar>;
   };
   
   return (
