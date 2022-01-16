@@ -1,6 +1,4 @@
 .PostCreateComponent {
-    display: flex;
-    justify-content: center;
     text-align: center;
     margin-top: 4rem;
 }
@@ -11,10 +9,30 @@
 
 .PostCreateDescription {
     margin-top: 1rem;
-    width: 350px;
+
 }
 
 .PostCreateTitleHr {
+    margin-top: 1rem;
     border-color: #000000;
-    border-radius: 60%;
+}
+
+.CreatePostForm {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.uploadFile {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30%;
+}
+
+.uploadFileIcon {
+    display: none;
 }

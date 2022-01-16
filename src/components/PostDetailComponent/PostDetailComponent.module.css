@@ -1,1 +1,25 @@
-.PostDetailComponent {}
+.PostDetailComponent {
+
+}
+/* .PostDetailComponentEditIcon {
+    font-size: 1.5rem;
+    display: flex;
+ 
+}
+.PostDetailComponentEditText{
+    font-size: 15px;
+    display: flex;
+} */
+
+.PostDetailComponentTopEditBar{
+    display: flex;
+    font-size:1.3rem;
+    align-items: center;
+    justify-content: center;    
+
+}
+
+.PostDetailComponentEditIcon{
+    height: 1em;
+    padding-right: 5px;
+}

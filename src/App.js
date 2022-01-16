@@ -1,25 +1,26 @@
 import './App.css';
-import $ from 'jquery';
+import React, { useState } from "react";
+import axios from "axios";
 import CommentComponent from './components/CommentComponent/CommentComponent.js';
+import PostDetailComponent from './components/PostDetailComponent/PostDetailComponent';
 import ConfirmationDeleteComponent from './components/ConfirmationDeleteComponent/ConfirmationDeleteComponent.js'
+import RobotCheckComponent from './components/RobotCheckComponent/RobotCheckComponent.js'
 import Logo from './assets/logo.png';
 
-function App() {
-  // $.ajax({
-  //   url: "http://localhost:2000/DM3H7P",
-  //   type: "GET",
-  //   crossDomain: true,
-  //   dataType: "json",
-  //   success: function (response) {
-  //       console.log(response);
-  //   },
-  //   error: function (xhr, status) {
-  //       console.log("error");
-  //   }
-  // });
 
+function App() {
+  const [post, setPost] = React.useState(null);
+  React.useEffect(() => {
+    getPost();
+  }, []);
+  async function getPost() {
+    const response = await axios.get("http://localhost:2000/TDQ575");
+    setPost(response.data);
+  }
   return (
     <div className="App">
+      <PostDetailComponent/>
+      <CommentComponent post={post} stateChanger={setPost} />
     </div>
   );
 }
