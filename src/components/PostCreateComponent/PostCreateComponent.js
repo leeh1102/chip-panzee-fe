@@ -5,7 +5,7 @@ import styles from './PostCreateComponent.module.css';
 import Box from '@mui/material/Box';
 import Input from '@mui/material/Input';
 import { Container, IconButton, Typography } from '@mui/material';
-import PhotoCameraIcon from '@mui/icons-material/PhotoCamera';
+import PhotoCameraIcon from '@mui/icons-material/PhotoCamera.js';
 import Button from '@mui/material/Button';
 
 export default function PostCreateComponent() {

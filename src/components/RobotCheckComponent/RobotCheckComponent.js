@@ -30,7 +30,7 @@ class RobotCheckComponent extends Component {
     let user_captcha = document.getElementById('user_captcha_input').value;
 
     if (validateCaptcha(user_captcha) == true) {
-      // Submitform here
+      // Submitform
       alert('Captcha Matched');
       loadCaptchaEnginge(6);
       document.getElementById('user_captcha_input').value = "";
@@ -46,7 +46,7 @@ class RobotCheckComponent extends Component {
 
 
     return (<div>
-      <div className="container">
+      <div className="contain">
         <div className="form-group">
 
           <div className="col mt-3">
