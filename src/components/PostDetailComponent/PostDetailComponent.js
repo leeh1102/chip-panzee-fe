@@ -5,13 +5,19 @@ import { faMobileAlt } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import CommentComponent from '../CommentComponent/CommentComponent.js';
+import Button from '@mui/material/Button';
+import ShareBtnsComponent from '../ShareBtnsComponent/ShareBtnsComponent';
+
+
 
 const PostDetailComponent = ({post, setPost}) => (
   <div className={styles.PostDetailComponent}>
     <div className={styles.PostDetailComponentTopEditBar}>
       <img src={image} className={styles.PostDetailComponentEditIcon}/>
       <div className={styles.PostDetailComponentEditText}> 
-      Edit
+      <Button>
+        <ShareBtnsComponent/>
+      </Button>
       </div>
     </div>
 

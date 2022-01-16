@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
+=======
+import React from 'react';
+>>>>>>> 44c34ee6e6582eb26d1a46611aed27360c238764
 import styles from './PostCreateComponent.module.css';
 import RobotCheckComponent from '../RobotCheckComponent/RobotCheckComponent';
 

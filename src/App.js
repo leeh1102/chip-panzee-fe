@@ -20,10 +20,15 @@ function App() {
   }
   return (
     <div className="App">
+<<<<<<< HEAD
       {/* <PostDetailComponent post={post} setPost={setPost}/>
        */}
       <PostCreateComponent />
 
+=======
+      {/* <PostDetailComponent post={post} setPost={setPost}/> */}
+      <PostDetailComponent/>
+>>>>>>> 44c34ee6e6582eb26d1a46611aed27360c238764
     </div>
   );
 }
