@@ -2,18 +2,18 @@
 	display: flex;
 	justify-content: center;
 	margin-top: 100px;
+    border: 2px solid black;
+    width: 300px;
 }
-#capt {
-	width: 170px;
+.capt {
+	width: 160px;
 	height: 72px;
-	font-size: 37px;
-	background-color: #2C31CF;
-	padding: 5px;
-	border: none;
-	letter-spacing: 1px;
-	float: left;
-	color: #E9E91D;
-	border-radius: 5px 0 0 5px;
+	font-size: 1.1rem;
+	background-color: #ffffff;
+	border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
 }
 #refresh {
 	float: left;
@@ -25,26 +25,30 @@
 	margin-top: 20px;
 	cursor: pointer;
 }
-#textinput {
-	width: 170px;
-	height: 70px;
-	font-size: 37px;
-	background-color: #252521;
+.textinput {
+	width: 160px;
+	height: 50px;
+	font-size: 1.1rem;
+	background-color: #ffffff;
 	border: none;
 	margin-left: 10px;
 	border-radius: 5px;
-	padding: 5px;
-	color: #D58A1E;
+    padding: 20px;
+    margin-bottom: 20px;
+	color: #000000;
 }
 .contain button {
+    font-family: "Kollektif";
+    font-size: 1.1rem;
 	padding: 8px 20px;
-	height: 35px;
+	height: 30px;
 	cursor: pointer;
 	border: none;
-	border-radius: 5px;
+	border-radius: 20px;
 	margin-left: 10px;
-	margin-top: 25px;
-	background-color: #764D11;
+	margin-top: 5px;
+    margin-bottom: 20px;
+	background-color: #C9411D;
 	color: #CED4F0;
 	transition: .5s;
 }
@@ -52,3 +56,6 @@
 	background-color: #976216;
 }
 
+.captcha{
+
+}

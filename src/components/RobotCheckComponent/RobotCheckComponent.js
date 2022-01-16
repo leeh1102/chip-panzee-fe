@@ -46,19 +46,18 @@ class RobotCheckComponent extends Component {
 
 
     return (<div>
-      <div className="contain">
+      <div className={styles.contain}>
         <div className="form-group">
 
-          <div className="col mt-3">
+          <div className={styles.capt}>
             <LoadCanvasTemplate />
           </div>
 
           <div className="col mt-3">
-            <div><input placeholder="Enter Captcha Value" id="user_captcha_input" name="user_captcha_input" type="text"></input></div>
-          </div>
-
-          <div className="col mt-3">
-            <div><button class="btn btn-primary" onClick={() => this.doSubmit()}>Submit</button></div>
+            <div>
+              <input placeholder="Enter Captcha" className={styles.textinput} id="user_captcha_input" name="user_captcha_input" type="text"></input>
+            </div>
+            <button class="btn btn-primary" onClick={() => this.doSubmit()}><p>Submit</p></button>
           </div>
 
         </div>
