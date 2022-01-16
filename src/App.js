@@ -2,6 +2,7 @@ import './App.css';
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import CommentComponent from './components/CommentComponent/CommentComponent.js';
+import PostDetailComponent from './components/PostDetailComponent/PostDetailComponent';
 import ConfirmationDeleteComponent from './components/ConfirmationDeleteComponent/ConfirmationDeleteComponent.js'
 import RobotCheckComponent from './components/RobotCheckComponent/RobotCheckComponent.js'
 import Logo from './assets/logo.png';
@@ -17,7 +18,8 @@ function App() {
     setPost(response.data);
   }
   return (
-    <div>
+    <div className="App">
+      <PostDetailComponent/>
       <CommentComponent post={post} stateChanger={setPost} />
       <br></br>
       <RobotCheckComponent />
