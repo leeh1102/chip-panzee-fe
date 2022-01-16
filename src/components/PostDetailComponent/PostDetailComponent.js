@@ -101,4 +101,8 @@ PostDetailComponent.propTypes = {};
 
 PostDetailComponent.defaultProps = {};
 
+ShareBtnsComponent.propTypes = {};
+
+ShareBtnsComponent.defaultProps = {};
+
 export default PostDetailComponent;
