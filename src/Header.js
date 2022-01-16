@@ -3,7 +3,9 @@ import React from "react";
 
 export default function Header() {
   const displayDesktop = () => {
-    return <Toolbar id="title" >CHIPPIN'</Toolbar>;
+    return <Toolbar id="title" >
+        <img class="Logo" src = "./assets/headerlogo.png"></img>
+    </Toolbar>;
   };
   
   return (
