@@ -19,11 +19,12 @@ function App() {
   //       console.log("error");
   //   }
   // });
+  
 
 
   return (
     <div className="App">
-      <RobotCheckComponent/>
+      <RobotCheckComponent />
     </div>
   );
 }
