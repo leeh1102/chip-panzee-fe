@@ -17,7 +17,7 @@ const PostDetailComponent = () => {
   let { id } = useParams();
 
   function checkPasscode(passcode) {
-    axios.get("http://localhost:2000/checkpasscode/" + {id}.id + "?passcode=" + passcode).then(res => {
+    axios.get("/api/checkpasscode/" + {id}.id + "?passcode=" + passcode).then(res => {
       if (res.data.code === 200) {
         setButtonPopup(false);
         getPost();
@@ -32,7 +32,7 @@ const PostDetailComponent = () => {
   };
 
   async function getPost() {
-    const response = await axios.get("http://localhost:2000/" +  {id}.id + "?passcode=" + passcode);
+    const response = await axios.get("/api/" +  {id}.id + "?passcode=" + passcode);
     setPost(response.data);
     console.log(post);
   }
