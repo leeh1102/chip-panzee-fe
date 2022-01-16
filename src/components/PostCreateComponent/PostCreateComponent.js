@@ -31,7 +31,7 @@ export default function PostCreateComponent() {
           // image: image
         };
         console.log(data.get('postImage'));
-        axios.post("http://localhost:2000", body)
+        axios.post("/api", body)
           .then((res) => {
             const uri = "/view/" + res.data.id;
             navigate(uri);

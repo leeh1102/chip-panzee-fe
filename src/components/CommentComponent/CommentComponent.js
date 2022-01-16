@@ -16,7 +16,7 @@ const CommentComponent = ({post, stateChanger}) => {
   }, [response]);
 
   function addComment(comment) {
-    axios.get("http://localhost:2000/comment/" + post.stringId + "?comment=" + comment).then(res => {
+    axios.get("/api/comment/" + post.stringId + "?comment=" + comment).then(res => {
       setResponse(res);
     });
   };
