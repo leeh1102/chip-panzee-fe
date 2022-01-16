@@ -1,11 +1,8 @@
 import './App.css';
 import $ from 'jquery';
 import CommentComponent from './components/CommentComponent/CommentComponent.js';
-<<<<<<< HEAD
 import ConfirmationDeleteComponent from './components/ConfirmationDeleteComponent/ConfirmationDeleteComponent.js'
-=======
 import Logo from './assets/logo.png';
->>>>>>> 77fd426e755a7bd886d0d6e9cc7f3a0d495a87cd
 
 function App() {
   // $.ajax({
