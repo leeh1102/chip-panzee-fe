@@ -4,6 +4,7 @@
 }
 
 .PostCreateComponentTitle {
+    margin-top: 7px;
     color: #363773;
 }
 
@@ -36,4 +37,13 @@
 
 .photoCameraIcon{
     color: black;
+}
+
+.logo {
+    height: 150px;
+    pointer-events: none;
+}
+
+.PostCreateComponentLogo {
+    margin-bottom: 25px;
 }

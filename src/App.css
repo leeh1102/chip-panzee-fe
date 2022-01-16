@@ -3,6 +3,9 @@
   width: 700px;
   margin-left: calc(50% - 350px);
   border: 1px solid black;
+  margin-top: 20px;
+  background-color: #FFFBEA;
+  border-radius: 50px;
 }
 
 .App-logo {
