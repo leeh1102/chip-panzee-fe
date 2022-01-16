@@ -9,7 +9,12 @@ body {
 
 @font-face {
   font-family: "BobbyJones";
-  src: url(./fonts/Bobby\ Jones\ Soft.otf);
+  src: url(./fonts/BobbyJonesSoft.otf);
+}
+
+@font-face {
+  font-family: "Kollektif";
+  src: url(./fonts/Kollektif.ttf);
 }
 
 #title {
