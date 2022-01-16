@@ -11,9 +11,9 @@ const CommentComponent = () => {
     <p className={styles.TitleText}><FontAwesomeIcon icon={faCommentDots} />&nbsp;COMMENTS</p>
     <div className={styles.CommentTextArea}>
       <ul>
-      {items.map((item, index)=>{
+      {/* {items.map((item, index)=>{
           return <li key={index}>{item}</li>
-      })}
+      })} */}
     </ul>
     </div>
   </div>
