@@ -20,13 +20,6 @@ function App() {
 
   return (
     <div className="App">
-<<<<<<< HEAD
-      <ConfirmationDeleteComponent/>
-=======
-      <header className="header-logo">
-        <img className="img-logo" src={Logo} alt="Chippin Logo" />
-      </header>
->>>>>>> 77fd426e755a7bd886d0d6e9cc7f3a0d495a87cd
     </div>
   );
 }
