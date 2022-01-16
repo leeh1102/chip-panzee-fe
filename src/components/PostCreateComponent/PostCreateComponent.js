@@ -99,10 +99,15 @@ export default function PostCreateComponent() {
           <Grid container spacing={2}>
             <Grid item xs={12} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
               <div className={styles.uploadFile}>
-                <input accept="image/*" id="icon-button-file" type="file" name="postImage" multiple="multiple" />
-                <IconButton color="primary" className={styles.photoCameraIcon} aria-label="upload picture" component="span">
-                  <PhotoCameraIcon />
-                </IconButton>
+                <label htmlFor="icon-button-file">
+                  <Input accept="image/*" id="icon-button-file" type="file" name="postImage" multiple="multiple" sx={{
+                    display: 'none'
+                  }} />
+                  <IconButton color="primary" className={styles.photoCameraIcon
+                  } aria-label="upload picture" component="span">
+                    <PhotoCameraIcon />
+                  </IconButton>
+                </label>
               </div>
             </Grid>
             <Grid item xs={12} sm={6}>
