@@ -1,7 +1,6 @@
 import './App.css';
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import CommentComponent from './components/CommentComponent/CommentComponent.js';
 import PostDetailComponent from './components/PostDetailComponent/PostDetailComponent';
 import ConfirmationDeleteComponent from './components/ConfirmationDeleteComponent/ConfirmationDeleteComponent.js'
 import RobotCheckComponent from './components/RobotCheckComponent/RobotCheckComponent.js'
@@ -21,11 +20,8 @@ function App() {
   }
   return (
     <div className="App">
-      {/* <PostDetailComponent/>
-      <CommentComponent post={post} stateChanger={setPost} /> */}
-      <PostCreateComponent />
-      {/* <RobotCheckComponent/>
-      <ShareBtnsComponent/> */}
+      <PostDetailComponent post={post} setPost={setPost}/>
+      
     </div>
   );
 }
