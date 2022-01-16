@@ -1,6 +1,7 @@
 import './App.css';
 import $ from 'jquery';
 import CommentComponent from './components/CommentComponent/CommentComponent.js';
+import ConfirmationDeleteComponent from './components/ConfirmationDeleteComponent/ConfirmationDeleteComponent.js'
 
 function App() {
   // $.ajax({
@@ -18,6 +19,7 @@ function App() {
 
   return (
     <div className="App">
+      <ConfirmationDeleteComponent/>
     </div>
   );
 }
