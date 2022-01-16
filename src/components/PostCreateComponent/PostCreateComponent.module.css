@@ -33,14 +33,7 @@
     border-radius: 30%;
 }
 
-.uploadFileInput {
-    display: none;
-}
 
 .photoCameraIcon{
     color: black;
-}
-
-.submitButton {
-    background-color: #C9411D;
 }

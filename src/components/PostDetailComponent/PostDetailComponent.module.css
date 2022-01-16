@@ -102,4 +102,8 @@
     outline: none;
     padding: 0 8px;
     margin-top: 20px;
+
+}
+.PostDetailComponentEditText {
+    margin-bottom: 20px;
 }
