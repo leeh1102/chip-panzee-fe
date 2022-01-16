@@ -82,7 +82,7 @@ export default function PostCreateComponent() {
     <Container maxWidth="xs">
       <Box
         sx={{
-          marginTop: 8,
+          marginTop: 3,
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
@@ -97,19 +97,6 @@ export default function PostCreateComponent() {
         <Box
           component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
           <Grid container spacing={2}>
-            <Grid item xs={12} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-              <div className={styles.uploadFile}>
-                <label htmlFor="icon-button-file">
-                  <Input accept="image/*" id="icon-button-file" type="file" name="postImage" multiple="multiple" sx={{
-                    display: 'none'
-                  }} />
-                  <IconButton color="primary" className={styles.photoCameraIcon
-                  } aria-label="upload picture" component="span">
-                    <PhotoCameraIcon />
-                  </IconButton>
-                </label>
-              </div>
-            </Grid>
             <Grid item xs={12} sm={6}>
               <TextField
                 name="userName"
