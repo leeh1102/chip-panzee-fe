@@ -1,19 +1,17 @@
 import React, { useEffect } from 'react';
 import styles from './PostCreateComponent.module.css';
-import RobotCheckComponent from '../RobotCheckComponent/RobotCheckComponent';
-
 import Box from '@mui/material/Box';
 import { Grid } from '@mui/material';
 import { TextField } from '@mui/material';
-import { Input } from '@mui/material';
-import { Container, IconButton } from '@mui/material';
-import PhotoCameraIcon from '@mui/icons-material/PhotoCamera.js';
+import { Container } from '@mui/material';
 import Button from '@mui/material/Button';
 import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from 'react-simple-captcha';
 import axios from 'axios';
-
+import Logo from '../../assets/logo.png';
+import { useNavigate } from "react-router-dom";
 
 export default function PostCreateComponent() {
+  const navigate = useNavigate();
   const handleSubmit = (event) => {
     let user_captcha = document.getElementById('user_captcha_input').value;
     if (validateCaptcha(user_captcha) == true) {
@@ -22,7 +20,8 @@ export default function PostCreateComponent() {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
         const body = {
-          name: data.get('userName'),
+          name: data.get('postTitle'),
+          owner: data.get('userName'),
           passcodeContent: data.get('passcode'),
           description: data.get('description'),
           price: data.get('fullAmount'),
@@ -34,7 +33,8 @@ export default function PostCreateComponent() {
         console.log(data.get('postImage'));
         axios.post("http://localhost:2000", body)
           .then((res) => {
-            alert("Your post is created!");
+            const uri = "/view/" + res.data.id;
+            navigate(uri);
           })
           .catch((err) => {
             console.log(err);
@@ -62,11 +62,13 @@ export default function PostCreateComponent() {
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          textAlign: 'center'
+          textAlign: 'center',
+          backgroundColor: '#FFFBEA'
         }}
       >
+        <img src={Logo} alt='Chippin Logo' id='logo' className={styles.PostCreateComponentLogo}/>
         <h1 className={styles.PostCreateComponentTitle}>
-          WELCOME TO CHIPPIN
+          WELCOME TO CHIPPIN'
         </h1>
         <p className={styles.PostCreateDescription}>The most convenient and fastest way of chipping in with your pals for any gifts 🎁 💰</p>
 

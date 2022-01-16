@@ -9,12 +9,15 @@ import Button from '@mui/material/Button';
 import ShareBtnsComponent from '../ShareBtnsComponent/ShareBtnsComponent';
 import axios from "axios";
 import Logo from '../../assets/logo.png';
+import { useParams } from 'react-router-dom'; 
 
 const PostDetailComponent = () => {
   const [passcode, setPasscode] = useState("");
   const [post, setPost] = useState(null);
+  let { id } = useParams();
+
   function checkPasscode(passcode) {
-    axios.get("http://localhost:2000/checkpasscode/URHCFL?passcode=" + passcode).then(res => {
+    axios.get("http://localhost:2000/checkpasscode/" + {id}.id + "?passcode=" + passcode).then(res => {
       if (res.data.code === 200) {
         setButtonPopup(false);
         getPost();
@@ -29,8 +32,9 @@ const PostDetailComponent = () => {
   };
 
   async function getPost() {
-    const response = await axios.get("http://localhost:2000/URHCFL?passcode=asdddd");
+    const response = await axios.get("http://localhost:2000/" +  {id}.id + "?passcode=" + passcode);
     setPost(response.data);
+    console.log(post);
   }
 
 
