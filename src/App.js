@@ -19,7 +19,7 @@ function App() {
   }
   return (
     <div className="App">
-      <PostDetailComponent/>
+      <PostDetailComponent />
       <CommentComponent post={post} stateChanger={setPost} />
     </div>
   );
