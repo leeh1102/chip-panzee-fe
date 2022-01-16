@@ -1,20 +1,54 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { useState, useEffect } from 'react';
 import styles from './CommentComponent.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCommentDots } from '@fortawesome/free-solid-svg-icons'
+import { faCommentDots, faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 import TextField from '@mui/material/TextField';
+import axios from "axios";
 
-const CommentComponent = () => {
+const CommentComponent = ({post, stateChanger}) => {
+  const [newComment, setNewComment] = useState("");
+  const [response, setResponse] = useState(null);
+
+  useEffect(() => {
+    if (response && response.data) {
+      stateChanger(response.data);
+    }
+  }, [response]);
+
+  function addComment(comment) {
+    axios.get("http://localhost:2000/comment/TDQ575?comment=" + comment).then(res => {
+       console.log("new comment added");
+       setResponse(res);
+    });
+  };
+
+  function handleChange(event) {
+    setNewComment(event.target.value);
+  };
+
   return (
   <div className={styles.CommentComponent}>
     <p className={styles.TitleText}><FontAwesomeIcon icon={faCommentDots} />&nbsp;COMMENTS</p>
     <div className={styles.CommentTextArea}>
-      <ul>
-      {/* {items.map((item, index)=>{
-          return <li key={index}>{item}</li>
-      })} */}
-    </ul>
+      <ul className={styles.CommentUL}>
+        {post && post.comments &&
+          post.comments.map((comment, index) => {
+            return <li key={'comments'+ index} className={styles.CommentListItems}>{comment}</li>;
+        })}
+      </ul>
+    </div>
+    <div>
+      <input 
+        className={styles.CommentEnterInput}
+        placeholder='Your opinion matters, share you thoughts here.'
+        value={newComment}
+        onChange={handleChange}
+      ></input>
+      <button 
+        className={styles.submitBtn}
+        onClick={() => addComment(newComment)}
+        disabled={newComment === null}
+      ><FontAwesomeIcon icon={faPaperPlane} /></button>
     </div>
   </div>
 )};
