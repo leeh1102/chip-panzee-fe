@@ -9,7 +9,7 @@ import { useFormControl } from '@mui/material/FormControl';
 
 import Input from '@mui/material/Input';
 import { Container, IconButton, Typography } from '@mui/material';
-import PhotoCameraIcon from '@mui/icons-material/PhotoCamera';
+import PhotoCameraIcon from '@mui/icons-material/PhotoCamera.js';
 import Button from '@mui/material/Button';
 
 //TODO Function to detect either one of the e-transfer information is filled; if both are not filled, the form can't be submitted.

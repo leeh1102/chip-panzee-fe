@@ -5,6 +5,7 @@ import CommentComponent from './components/CommentComponent/CommentComponent.js'
 import PostDetailComponent from './components/PostDetailComponent/PostDetailComponent';
 import ConfirmationDeleteComponent from './components/ConfirmationDeleteComponent/ConfirmationDeleteComponent.js'
 import RobotCheckComponent from './components/RobotCheckComponent/RobotCheckComponent.js'
+import ShareBtnsComponent from './components/ShareBtnsComponent/ShareBtnsComponent.js'
 import Logo from './assets/logo.png';
 
 
@@ -19,10 +20,11 @@ function App() {
   }
   return (
     <div className="App">
-      <PostDetailComponent />
-      <CommentComponent post={post} stateChanger={setPost} />
-      <br></br>
-      <RobotCheckComponent />
+      {/* <PostDetailComponent/>
+      <CommentComponent post={post} stateChanger={setPost} /> */}
+      <ConfirmationDeleteComponent/>
+      <RobotCheckComponent/>
+      <ShareBtnsComponent/>
     </div>
   );
 }
