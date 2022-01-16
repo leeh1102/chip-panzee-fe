@@ -66,6 +66,44 @@
     font-size: 14px;
 }
 
+.PasscodePopup {
+    border: 1px solid black;
+    height: 200px;
+    width: 300px;
+    position: relative;
+    background-color: #FFFBEA;
+    left: calc(50% - 150px);
+    top: 150px;
+    font-size: 22px;
+    border-radius: 45px;
+    overflow: hidden;
+}
+
+.PasscodePopup > p {
+    margin-top: 35px;
+}
+
+.PasscodePopup > button {
+    background-color: #413F6D;
+    color: white;
+    width: 300px;
+    height: 50px;
+    position: absolute;
+    right: -0.5px;
+    bottom: 0;
+    cursor: pointer;
+    outline: none;
+}
+
+.PasscodePopupInput {
+    height: 30px;
+    width: 230px;
+    border-radius: 15px;
+    outline: none;
+    padding: 0 8px;
+    margin-top: 20px;
+
+}
 .PostDetailComponentEditText {
     margin-bottom: 20px;
 }
