@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import CommentComponent from './components/CommentComponent/CommentComponent.js';
 import PostDetailComponent from './components/PostDetailComponent/PostDetailComponent';
@@ -9,8 +9,8 @@ import Logo from './assets/logo.png';
 
 
 function App() {
-  const [post, setPost] = React.useState(null);
-  React.useEffect(() => {
+  const [post, setPost] = useState(null);
+  useEffect(() => {
     getPost();
   }, []);
   async function getPost() {
@@ -21,6 +21,8 @@ function App() {
     <div className="App">
       <PostDetailComponent />
       <CommentComponent post={post} stateChanger={setPost} />
+      <br></br>
+      <RobotCheckComponent />
     </div>
   );
 }

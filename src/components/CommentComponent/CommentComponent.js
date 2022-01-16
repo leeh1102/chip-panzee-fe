@@ -17,8 +17,7 @@ const CommentComponent = ({post, stateChanger}) => {
 
   function addComment(comment) {
     axios.get("http://localhost:2000/comment/TDQ575?comment=" + comment).then(res => {
-       console.log("new comment added");
-       setResponse(res);
+      setResponse(res);
     });
   };
 
@@ -28,7 +27,7 @@ const CommentComponent = ({post, stateChanger}) => {
 
   return (
   <div className={styles.CommentComponent}>
-    <p className={styles.TitleText}><FontAwesomeIcon icon={faCommentDots} />&nbsp;COMMENTS</p>
+    <p className={styles.TitleText}>💬&nbsp;COMMENTS</p>
     <div className={styles.CommentTextArea}>
       <ul className={styles.CommentUL}>
         {post && post.comments &&
