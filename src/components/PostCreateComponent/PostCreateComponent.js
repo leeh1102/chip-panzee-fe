@@ -14,31 +14,7 @@ import axios from 'axios';
 
 
 export default function PostCreateComponent() {
-  // const [imgBase64, setImgBase64] = useState([]);
-  // const [imgFile, setImgFile] = useState(null);
-
-  // const handleChangeFile = (event) => {
-  //   console.log(event.target.files);
-  //   setImgFile(event.target.files);
-  //   setImgBase64([]);
-  //   for (var i = 0; i < event.target.files.length; i++) {
-  //     let reader = new FileReader();
-  //     reader.readAsDataURL(event.target.files[i]);
-  //     reader.onloadend = () => {
-  //       const base64 = reader.result;
-  //       console.log(base64);
-  //       if (base64) {
-  //         var base64sub = base64.toString();
-  //         setImgBase64(imgBase64 => [...imgBase64, base64sub]);
-  //       }
-  //     }
-  //   }
-  //   return event.target.files;
-  // }
-
-
   const handleSubmit = (event) => {
-    // let image = handleChangeFile();
     let user_captcha = document.getElementById('user_captcha_input').value;
     if (validateCaptcha(user_captcha) == true) {
       // Submitform

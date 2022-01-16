@@ -7,6 +7,8 @@
     display:flex;
     align-items: center;
     justify-content: center; 
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .PostDetailComponentPriceLeft, 
@@ -43,21 +45,13 @@
     margin-right: 15%;    
 }
 
-.PostDetailComponentTopEditBar {
-    display: flex;
-    font-size:1.3rem;
-    align-items: center;
-    justify-content: center;    
-
-}
-
 .PostDetailComponentEditIcon{
     height: 1em;
     padding-right: 5px;
 }
 
 .PostDetailComponentUrl {
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .PostDetailComponentUrl > p {
@@ -70,13 +64,14 @@
     border: 1px solid black;
     height: 200px;
     width: 300px;
-    position: relative;
+    position: absolute;
     background-color: #FFFBEA;
     left: calc(50% - 150px);
     top: 150px;
     font-size: 22px;
     border-radius: 45px;
     overflow: hidden;
+    box-shadow: 5px 10px #888888;
 }
 
 .PasscodePopup > p {
@@ -104,6 +99,16 @@
     margin-top: 20px;
 
 }
+
 .PostDetailComponentEditText {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.PostDetailComponentOrganizerName {
     margin-bottom: 20px;
+}
+
+.PostDetailComponentName {
+    margin-top: 20px;
 }

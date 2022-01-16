@@ -10,17 +10,10 @@ import PostCreateComponent from './components/PostCreateComponent/PostCreateComp
 
 
 function App() {
-  const [post, setPost] = useState(null);
-  useEffect(() => {
-    getPost();
-  }, []);
-  async function getPost() {
-    const response = await axios.get("http://localhost:2000/URHCFL?passcode=asdddd");
-    setPost(response.data);
-  }
+  
   return (
     <div className="App">
-      <PostDetailComponent post={post} setPost={setPost}/>
+      <PostDetailComponent />
       <header>
         <img src={Logo} alt='Chippin Logo' id='logo' />
       </header>

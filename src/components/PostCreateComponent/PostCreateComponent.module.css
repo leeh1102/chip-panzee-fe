@@ -37,3 +37,8 @@
 .photoCameraIcon{
     color: black;
 }
+
+.logo {
+    height: 150px;
+    pointer-events: none;
+  }
