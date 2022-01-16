@@ -44,6 +44,14 @@ export default function PostCreateComponent() {
         <Box
           component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
           <Grid container spacing={2}>
+            <Grid item xs={12} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+              <div className={styles.uploadFile}>
+                <Input accept="image/*" className={styles.uploadFileIcon} type="file" />
+                <IconButton color="primary" className={styles.photoCameraIcon} aria-label="upload picture" component="span">
+                  <PhotoCameraIcon />
+                </IconButton>
+              </div>
+            </Grid>
             <Grid item xs={12} sm={6}>
               <TextField
                 name="userName"
@@ -164,12 +172,7 @@ export default function PostCreateComponent() {
       noValidate
       autoComplete="off"
       onSubmit={handleSubmit}>
-      <div className={styles.uploadFile}>
-        <Input accept="image/*" className={styles.uploadFileIcon} type="file" />
-        <IconButton color="primary" className={styles.photoCameraIcon} aria-label="upload picture" component="span">
-          <PhotoCameraIcon />
-        </IconButton>
-      </div>
+      
     </Box> */
 
   );
