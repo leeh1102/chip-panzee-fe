@@ -1,6 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import styles from './PostCreateComponent.module.css';
+import styles from './PostCreateComponent.module.css'
 import RobotCheckComponent from '../RobotCheckComponent/RobotCheckComponent';
 
 import Box from '@mui/material/Box';
@@ -13,11 +12,17 @@ import Button from '@mui/material/Button';
 
 //TODO Function to detect either one of the e-transfer information is filled; if both are not filled, the form can't be submitted.
 
+// TODO Display the captcha when the user submit it 
+const submitted = true;
 
 export default function PostCreateComponent() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
+
+    // const captcha = document.getElementsByClassName('robotCheckComponent')[0];
+
+    // captcha.style.display = 'block';
 
     console.log({
       name: data.get('userName'),
@@ -49,7 +54,7 @@ export default function PostCreateComponent() {
           <Grid container spacing={2}>
             <Grid item xs={12} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
               <div className={styles.uploadFile}>
-                <Input accept="image/*" className={styles.uploadFileInput} id="icon-button-file" type="file" />
+                <Input accept="image/*" className={styles.uploadFileInput} id="icon-button-file" type="file" sx={{ display: 'none' }} />
                 <IconButton color="primary" className={styles.photoCameraIcon} aria-label="upload picture" component="span">
                   <PhotoCameraIcon />
                 </IconButton>
@@ -157,13 +162,13 @@ export default function PostCreateComponent() {
             </Grid>
           </Grid>
           <Grid item xs={12} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <RobotCheckComponent />
+            {submitted && <RobotCheckComponent />}
           </Grid>
           <Button
             className={styles.submitButton}
             type="submit"
             variant="contained"
-            sx={{ mt: 3, mb: 2 }}
+            sx={{ mt: 3, mb: 2, backgroundColor: '#C9411D' }}
           >
             READY TO CHIP IN?
           </Button>
@@ -171,15 +176,6 @@ export default function PostCreateComponent() {
       </Box>
 
     </Container>
-
-    /* <Box
-      className={styles.CreatePostForm}
-      component="form" sx={{ mt: 3 }}
-      noValidate
-      autoComplete="off"
-      onSubmit={handleSubmit}>
-      
-    </Box> */
 
   );
 }

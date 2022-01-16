@@ -57,7 +57,7 @@ class RobotCheckComponent extends Component {
             <div>
               <input placeholder="Enter Captcha" className={styles.textinput} id="user_captcha_input" name="user_captcha_input" type="text"></input>
             </div>
-            <button class="btn btn-primary" onClick={() => this.doSubmit()}><p>Submit</p></button>
+            <button className="btn btn-primary" onClick={() => this.doSubmit()}><p>Submit</p></button>
           </div>
 
         </div>

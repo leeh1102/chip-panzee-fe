@@ -10,7 +10,6 @@ import RobotCheckComponent from './components/RobotCheckComponent/RobotCheckComp
 ReactDOM.render(
   <React.StrictMode>
     <App />
-    <PostCreateComponent />
   </React.StrictMode>,
   document.getElementById('root')
 );
