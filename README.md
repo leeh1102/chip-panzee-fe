@@ -1,6 +1,6 @@
 # Project Title
 
-* CHIPPIN
+* Chip-in
 
 
 ## Description
